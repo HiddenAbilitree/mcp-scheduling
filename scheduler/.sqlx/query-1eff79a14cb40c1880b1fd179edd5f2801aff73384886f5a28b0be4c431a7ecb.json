@@ -1,0 +1,24 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT AVG(total_time_ms)::FLOAT AS \"avg_total_time_ms!\"\n            FROM (\n                SELECT total_time_ms\n                FROM tool_call_results\n                WHERE tool_name = $1 AND mcp_url = $2 AND is_error = FALSE\n                ORDER BY timestamp DESC\n                LIMIT $3\n            ) AS recent_logs\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "avg_total_time_ms!",
+        "type_info": "Float8"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int8"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "1eff79a14cb40c1880b1fd179edd5f2801aff73384886f5a28b0be4c431a7ecb"
+}

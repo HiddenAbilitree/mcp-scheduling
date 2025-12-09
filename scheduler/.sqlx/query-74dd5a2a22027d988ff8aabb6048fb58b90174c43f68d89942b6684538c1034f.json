@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n    INSERT INTO tool_call_results (tool_name, mcp_url, total_time_ms, is_error)\n    VALUES ($1, $2, $3, $4)\n    ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Int8",
+        "Bool"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "74dd5a2a22027d988ff8aabb6048fb58b90174c43f68d89942b6684538c1034f"
+}

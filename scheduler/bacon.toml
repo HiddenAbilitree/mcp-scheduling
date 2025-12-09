@@ -1,0 +1,11 @@
+[jobs.run-long-release]
+command = [
+    "cargo", "run", "--release"
+]
+env = { RUST_LOG = "testing_bot=trace", DATABASE_URL="postgresql://user:password@localhost:5432/mcp_scheduling", SQLX_OFFLINE="true" }
+need_stdout = true
+allow_warnings = true
+background = false
+on_change_strategy = "kill_then_restart"
+
+

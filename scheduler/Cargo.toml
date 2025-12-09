@@ -1,0 +1,25 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+async-trait = "0.1.89"
+axum = "0.8.6"
+dotenvy = "0.15.7"
+dotenvy_macro = "0.15.7"
+futures = "0.3.31"
+qdrant-client = {version = "1.16.0"} 
+reqwest = { version = "0.12", features = ["json"] }
+rmcp = { version = "0.9.0", features = ["transport-streamable-http-client-reqwest", "client"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0"
+sqlx = { version = "0.8.6", features = ["runtime-tokio", "macros", "postgres", "uuid", "chrono", "migrate"] }
+tokio = { version = "1.0", features = ["full"] }
+tokio-cron-scheduler = "0.15.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.18.1", features = ["v4", "v5"] }
+
+[dev-dependencies]
+tokio-test = "0.4"

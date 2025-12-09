@@ -1,0 +1,33 @@
+{
+  "name": "agent",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "bun test",
+    "benchmark": "bun run scripts/benchmark.ts",
+    "list:time": "bun run scripts/list-benchmark-times.ts",
+    "list:acc": "bun run scripts/list-benchmark-accuracy.ts",
+    "summarize": "bun run scripts/summarize-benchmark.ts",
+    "dev": "bun run --watch src/index.ts "
+  },
+  "dependencies": {
+    "@langchain/community": "latest",
+    "@langchain/core": "latest",
+    "@langchain/mcp-adapters": "^1.0.0",
+    "@langchain/ollama": "^1.0.1",
+    "@langchain/openai": "latest",
+    "@modelcontextprotocol/sdk": "^1.23.0",
+    "arktype": "^2.1.27",
+    "elysia": "latest",
+    "json-schema-to-zod": "^2.7.0",
+    "langchain": "^1.0.6",
+    "ollama": "latest",
+    "openai": "^6.9.1"
+  },
+  "devDependencies": {
+    "@hiddenability/opinionated-defaults": "^0.1.34",
+    "@types/node": "^24.10.1",
+    "bun-types": "latest",
+    "@inquirer/prompts": "^8.0.1"
+  },
+  "module": "src/index.js"
+}

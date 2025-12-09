@@ -1,0 +1,24 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n          SELECT COUNT(*) AS \"count!\"\n          FROM tool_call_results\n          WHERE tool_name = $1\n            AND mcp_url = $2\n            AND is_error = TRUE\n            AND timestamp > NOW() - INTERVAL '1 minute' * $3\n          ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "count!",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Float8"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "79f82609490855b7bc81e871c9174f2db36b4dac497a2563815604a5fc2fa964"
+}

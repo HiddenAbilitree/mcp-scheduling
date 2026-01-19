@@ -1,6 +1,17 @@
 # mcp-scheduling
 > it's actually a router
 
+
+A framework-agnostic tool router for MCP (Model Context Protocol)
+servers. Routes agent requests to the fastest available tool when
+similar tools exist, cutting response latency by ~64% (tool
+dependent) on average across 824 benchmark questions.
+            
+Tool similarity is determined by computing vector embeddings of each
+tool's description, then grouping duplicates via cosine
+similarity. This lets the router identify functionally equivalent
+tools automatically.
+
 <div align="center">
   <img width="2124" height="1223" alt="image" src="https://github.com/user-attachments/assets/23571d49-ebab-47d7-a9ff-8bd3d31a7b38" /> 
 
